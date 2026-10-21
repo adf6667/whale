@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no"
+    />
+    <meta name="theme-color" content="#06121f" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>抹茶肥鱼</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="apple-touch-icon" href="assets/icon-192.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <span class="dot"></span>
+        <h1>抹茶肥鱼</h1>
+        <button id="gear" aria-label="设置">⚙</button>
+      </header>
+
+      <main>
+        <div id="stage">
+          <video id="pet" playsinline muted autoplay loop></video>
+          <div id="bubble" class="bubble hidden"></div>
+        </div>
+        <div id="log"></div>
+      </main>
+
+      <footer>
+        <button id="rice" aria-label="喂白米饭">🍚</button>
+        <input id="msg" placeholder="跟小鲸鱼说点什么…" autocomplete="off" enterkeyhint="send" />
+        <button id="send">发送</button>
+      </footer>
+    </div>
+
+    <div id="sheet" class="hidden">
+      <div class="card">
+        <h2>设置</h2>
+        <label>
+          DeepSeek API Key
+          <input id="keyInput" type="password" placeholder="sk-..." autocomplete="off" />
+        </label>
+        <p class="hint">只存在这台手机上（浏览器本地存储），不会上传。</p>
+        <div class="row">
+          <button id="saveKey" class="primary">保存</button>
+          <button id="closeSheet">关闭</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
